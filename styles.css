@@ -55,7 +55,7 @@ body.theme-pulse {
 }
 
 .logo-mark {
-  width: 120px;
+  width: 140px;
   margin-bottom: 16px;
   filter: drop-shadow(0 10px 25px rgba(93, 240, 192, 0.35));
 }
@@ -127,6 +127,16 @@ h1 {
   position: relative;
   border-radius: 24px;
   overflow: hidden;
+}
+
+.hero-photo {
+  width: 100%;
+  margin-top: 18px;
+  border-radius: 22px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  object-fit: cover;
+  max-height: 260px;
+  filter: saturate(1.05);
 }
 
 
@@ -308,19 +318,61 @@ h1 {
   border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-.logo-row {
+.pill-row {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 24px;
 }
 
-.logo-placeholder {
+.pill-row span {
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 10px;
   padding: 8px 14px;
   font-size: 0.85rem;
   color: var(--muted);
+}
+
+.catalog {
+  padding: 50px 0;
+}
+
+.catalog-header {
+  max-width: 620px;
+  margin-bottom: 24px;
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 22px;
+}
+
+.catalog-card {
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  min-height: 260px;
+  background-size: cover;
+  background-position: center;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.catalog-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(180deg, rgba(5, 11, 20, 0) 0%, rgba(5, 11, 20, 0.85) 100%);
+}
+
+.catalog-overlay {
+  position: absolute;
+  inset: 0;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: 8px;
 }
 
 .social {
@@ -360,52 +412,6 @@ h1 {
   color: rgba(247, 249, 255, 0.6);
 }
 
-.gallery {
-  padding: 40px 0 60px;
-  display: grid;
-  gap: 20px;
-}
-
-.gallery-item {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 18px;
-  align-items: center;
-  background: rgba(6, 12, 22, 0.7);
-  border-radius: 20px;
-  padding: 16px;
-  border: 1px solid rgba(255, 255, 255, 0.06);
-}
-
-.gallery-icon {
-  width: 140px;
-  height: 140px;
-  border-radius: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 1.3rem;
-  letter-spacing: 0.1em;
-  color: var(--text);
-}
-
-.lab-icon {
-  background: linear-gradient(135deg, rgba(93, 240, 192, 0.4), rgba(78, 205, 232, 0.4));
-}
-
-.cnc-icon {
-  background: linear-gradient(135deg, rgba(255, 93, 162, 0.35), rgba(78, 205, 232, 0.35));
-}
-
-.gallery-copy h3 {
-  margin: 0 0 10px;
-}
-
-.gallery-copy p {
-  color: var(--muted);
-  margin: 0;
-}
 
 .process {
   padding: 60px 0;
